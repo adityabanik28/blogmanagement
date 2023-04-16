@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "a31bba8b-7c7e-45be-9113-5c23a38d5bbe",
+		"name": "NSEC_IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14840080"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"debasish\",\r\n    \"username\":\"d@d.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"a@a.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2VjYTZjMmE0Mjk2ZmU0YmYzY2Y0MWYiLCJuYW1lIjoiYUBhLmNvbSIsInVzZXJuYW1lIjoiYUBhLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEhCZUtCYUpsVHZaRlFnMWlaMDVMci52Zkh6Q3daTXMweWpWY2xCV2VPZlR6OEtBNUpJOVg2IiwiX192IjowLCJpYXQiOjE2NzY0NTg1NTksImV4cCI6MTY3NjQ1OTQ1OX0.VWgeN3aGDYyNGNBiO30Cwso0KnAi-IbBTbgB1MqyEGU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/user/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "CreatePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Demo Title\",\r\n    \"description\":\"Demo Desc\",\r\n    \"picture\":\"Demo Pic\",\r\n    \"username\":\"a@a.com\",\r\n    \"categories\":\"tech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/post/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePost",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Demo Title1\",\r\n    \"description\":\"Demo description\",\r\n    \"picture\":\"Demo Pic\",\r\n    \"username\":\"abc@a.com\",\r\n    \"categories\":\"react\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/post/update/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"update",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePeople",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/delete/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"delete",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SinglePost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/post/63ed32a11709e822ab74dca6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"post",
+								"63ed32a11709e822ab74dca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/post/posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"post",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "New Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"a@a.com\",\r\n    \"postId\":\"63ed32b21709e822ab74dcab\",\r\n    \"data\":\"Thursday, 16 February, 2023\",\r\n    \"comments\":\"jnfcpikqwejnfcikeqwjfciqewjfdiqewjfdfnqweohfoqewhfoqjhfdoqweihfd\"\r\n    \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/comment/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/comment/comments/63edcd99a29030d311789d2a",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"comments",
+								"63edcd99a29030d311789d2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/comment/delete/63edcd99a29030d311789d2a",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comment",
+								"delete",
+								"63edcd99a29030d311789d2a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
